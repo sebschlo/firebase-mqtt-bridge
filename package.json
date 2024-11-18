@@ -1,0 +1,21 @@
+{
+  "name": "firebase-mqtt-bridge",
+  "version": "1.0.0",
+  "description": "A Node.js app to bridge Firebase and MQTT",
+  "main": "mqttServer.js",
+  "scripts": {
+    "start": "node mqttServer.js",
+    "dev": "nodemon mqttServer.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.0.0",
+    "mqtt": "^4.2.8"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
