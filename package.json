@@ -8,14 +8,14 @@
     "dev": "nodemon mqttServer.js"
   },
   "dependencies": {
-    "firebase-admin": "^11.0.0",
-    "mqtt": "^4.2.8"
+    "firebase-admin": "^13.0.0",
+    "mqtt": "^5.10.2"
   },
   "engines": {
     "node": "22.x"
   },
   "devDependencies": {
-    "nodemon": "^3.0.0",
-    "dotenv": "^16.0.0"
+    "nodemon": "^3.1.7",
+    "dotenv": "^16.4.5"
   }
 }
