@@ -21,6 +21,22 @@ admin.initializeApp({
 const brokerPort = process.env.PORT || 3000; // Use Heroku's assigned port
 const server = http.createServer();
 
+// Parse the VALID_USERS environment variable
+const validUsers = JSON.parse(process.env.VALID_USERS || '{}');
+
+// Add authentication to the MQTT broker
+aedes.authenticate = (client, username, password, callback) => {
+  const isValidUser = validUsers[username] && validUsers[username] === password.toString();
+  if (isValidUser) {
+    callback(null, true);
+  } else {
+    const error = new Error('Authentication Failed');
+    error.returnCode = 4; // MQTT 3.1.0: Bad username or password
+    callback(error, false);
+  }
+};
+
+// Connect broker to websockets
 ws.createServer({ server }, aedes.handle);
 
 server.listen(brokerPort, function () {
@@ -36,3 +52,5 @@ ref.on('value', (snapshot) => {
   const data = snapshot.val();
   aedes.publish({ topic: 'beacon_users', payload: JSON.stringify(data) });
 });
+
+
