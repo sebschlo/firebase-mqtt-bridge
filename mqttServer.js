@@ -2,7 +2,8 @@
 
 const admin = require('firebase-admin');
 const aedes = require('aedes')();
-const net = require('net');
+const http = require('http');
+const ws = require('websocket-stream');
 if (process.env.NODE_ENV !== 'prod') {
     require('dotenv').config();
 }
@@ -16,12 +17,14 @@ admin.initializeApp({
   databaseURL: 'https://spatialmedia-22177-default-rtdb.firebaseio.com/'
 });
 
-// Create and start the MQTT broker
-const brokerPort = 1883;
-const server = net.createServer(aedes.handle);
+// Create and start the MQTT broker over WebSockets
+const brokerPort = process.env.PORT || 3000; // Use Heroku's assigned port
+const server = http.createServer();
+
+ws.createServer({ server }, aedes.handle);
 
 server.listen(brokerPort, function () {
-  console.log('MQTT broker started and listening on port', brokerPort);
+  console.log('MQTT broker over WebSockets started and listening on port', brokerPort);
 });
 
 // Firebase database reference
