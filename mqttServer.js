@@ -2,6 +2,7 @@
 
 const admin = require('firebase-admin');
 const mqtt = require('mqtt');
+const http = require('http');
 if (process.env.NODE_ENV !== 'prod') {
     require('dotenv').config();
 }
@@ -43,4 +44,16 @@ mqttClient.on('connect', () => {
 
 mqttClient.on('error', (err) => {
   console.error('MQTT connection error:', err);
+});
+
+// Add a simple HTTP server to bind to the required port
+const PORT = process.env.PORT || 3000; // Use the PORT environment variable or default to 3000
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('MQTT Server is running\n');
+});
+
+server.listen(PORT, () => {
+  console.log(`HTTP server listening on port ${PORT}`);
 });
