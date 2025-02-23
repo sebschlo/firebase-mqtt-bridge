@@ -43,7 +43,7 @@ const CLEANUP_THRESHOLD = 5 * 60 * 1000; // 5 minutes in milliseconds
 async function generateConversationStarter(userProfiles) {
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-4-turbo-preview",
+      model: "gpt-4o",
       messages: [
         {
           role: "system",
@@ -51,7 +51,7 @@ async function generateConversationStarter(userProfiles) {
         },
         {
           role: "user",
-          content: `Generate a natural and engaging conversation starter for these people based on their profiles: ${JSON.stringify(userProfiles)}. Keep it casual and friendly, focusing on common interests or complementary experiences.`
+          content: `Generate a natural and engaging conversation starter for these people based on their profiles: ${JSON.stringify(userProfiles)}. Keep it casual and friendly, focusing on common interests or complementary experiences. Don't repeat or mention any details from their profile, but rather think about what things they might have in common. Be whimsical and creative with the prompt, and make it really short and punchy. Don't be afraid to go into weird or deep places, this is a social experiment and it should be interesting for the users.`
         }
       ],
       max_tokens: 150
