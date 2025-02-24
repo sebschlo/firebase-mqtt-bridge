@@ -51,7 +51,7 @@ async function generateConversationStarter(userProfiles) {
         },
         {
           role: "user",
-          content: `Generate a natural and engaging conversation starter for these people based on their profiles: ${JSON.stringify(userProfiles)}. Keep it casual and friendly, focusing on common interests or complementary experiences. Don't repeat or mention any details from their profile, but rather think about what things they might have in common. Be whimsical and creative with the prompt, and make it really short and punchy. Don't be afraid to go into weird or deep places, this is a social experiment and it should be interesting for the users.`
+          content: `Generate a natural and engaging conversation starter for these people based on their profiles: ${JSON.stringify(userProfiles)}. Keep it casual and friendly, focusing on common interests or complementary experiences. Don't repeat or mention any details from their profile, but rather think about what things they might have in common. Be whimsical and creative with the prompt, and make it really short and punchy. Don't be afraid to go into weird or deep places, this is a social experiment and it should be interesting for the users. If only one person is present, give them a thought provoking question for them to ponder.`
         }
       ],
       max_tokens: 150
@@ -123,7 +123,7 @@ app.get('/prompt', async (req, res, next) => {
     // Get nearby users and clean up old data
     const nearbyUsers = await getNearbyUsers(beacon_id);
 
-    if (nearbyUsers.length < 2) {
+    if (nearbyUsers.length < 1) {
       return res.status(200).json({ message: 'Not enough users nearby' });
     }
 
