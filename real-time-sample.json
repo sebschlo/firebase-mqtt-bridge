@@ -1,0 +1,200 @@
+{
+  "beacons": {
+    "2:3": {
+      "users": [
+        {
+          "id": "08DcXYYzItfoc5kMR5aFCpYiCAq1",
+          "proximity": 1,
+          "signalStrength": -30,
+          "timestamp": 1740442289.36325
+        },
+        {
+          "id": "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2",
+          "proxmity": 1,
+          "signalStrength": -30,
+          "timestamp": 1740442289.36325
+        }
+      ]
+    }
+  },
+  "conversation_prompts": {
+    "-OJkveozIjoB7SfrdjeF": {
+      "beacon_id": "2:3",
+      "prompt": "Hey Vaibhav and Sebastian,\n\nGiven Vaibhav's passion for storytelling and film making, paired with Sebastian's interest in interactive art and sculpture, you both seem to have a knack for thinking outside the box and bringing stories to life in unique ways. Vaibhav, with your background in architectural and computational design, it sounds like you're adept at blending form, function, and narrative. And Sebastian, your interests in HCI (Human-Computer Interaction) could add a dynamic interactive layer to traditional storytelling methods.\n\nHow do you think your fields can overlap in creating innovative narratives or experiences? Can you imagine combining interactive art or sculpture with architectural design to tell stories that engage audiences in new and immersive ways? It'd be fascinating to hear",
+      "timestamp": 1740282703135,
+      "users": [
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2",
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2"
+      ]
+    },
+    "-OJkwg9wW6CiQbjvk_UP": {
+      "beacon_id": "2:3",
+      "prompt": "\"Imagine you're both at an international film festival that features movies about kite flying adventures, with a special section on how technology influences traditional storytelling in both cinema and architecture. As the evening winds down, you find yourselves at a workshop about creating interactive art installations that double as kinetic sculptures. How do you think your backgrounds could merge to create a groundbreaking project for next year's festival?\"",
+      "timestamp": 1740282970770,
+      "users": [
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJkx0-8ADjbQTWlB60r": {
+      "beacon_id": "2:3",
+      "prompt": "\"Imagine you both are exploring an ancient, hidden city: one is sketching its unknown architecture while the other is creating an interactive sculpture that tells its untold story. How do you think your creation will communicate with each other?\"",
+      "timestamp": 1740283056124,
+      "users": [
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJkxBsH37WgH9Ube2Gx": {
+      "beacon_id": "2:3",
+      "prompt": "If you could create an interactive piece of art that dances or tells a story, what magical world would it bring to life?",
+      "timestamp": 1740283104762,
+      "users": [
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJkxIUvrAQ4FFl2zXPX": {
+      "beacon_id": "2:3",
+      "prompt": "\"Imagine if we blended interactive art with a storytelling dance performance—what kind of futuristic narrative magic could we create? 🌟 How would you guys weave your unique skills to craft an immersive experience that ignites curiosity and wonder?\"",
+      "timestamp": 1740283131875,
+      "users": [
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJsnHZotPZAquJp6GBx": {
+      "beacon_id": "2:3",
+      "prompt": "If you could create an interactive art piece using kites that brought together elements of Guatemalan culture and German engineering, what would that look like in the sky?",
+      "timestamp": 1740414724390,
+      "users": [
+        "pqWMbqclDpOX00Fr9LvS4fimHxR2"
+      ]
+    },
+    "-OJtrkU6M8d6fZVF4u2G": {
+      "beacon_id": "2:3",
+      "prompt": "Hey Manas and Vaibhav, if you could design a movie in which the world of art and architecture comes alive and starts interacting with humans, what wild and whimsical story would you both dream up? 🎨🏛️📽️",
+      "timestamp": 1740432672725,
+      "users": [
+        "WPGsFUxCVeY9yOwyPQLaIcA4Cd13",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJttoZOygWO7HLFPSKN": {
+      "beacon_id": "2:3",
+      "prompt": "If you could invent a gadget that not only entertains but also has the power to brighten someone’s day instantly, what would it be and how would it spark joy?",
+      "timestamp": 1740433213736,
+      "users": [
+        "kE1qEaOzHmZsXtED5x99VcIP3s42"
+      ]
+    },
+    "-OJttveC4U4uGFwgUGMC": {
+      "beacon_id": "2:3",
+      "prompt": "If you could create a gadget that would magically make everyone's day just a tad bit brighter and more fun, what would it look like and how would it work?",
+      "timestamp": 1740433242780,
+      "users": [
+        "kE1qEaOzHmZsXtED5x99VcIP3s42"
+      ]
+    },
+    "-OJtu6D-CkNOOnfDba0W": {
+      "beacon_id": "2:3",
+      "prompt": "If you could design an app to star in its own movie, what would its plot twist be? Would it dance its way out of trouble or build a world-changing gadget to save the day?",
+      "timestamp": 1740433290127,
+      "users": [
+        "kE1qEaOzHmZsXtED5x99VcIP3s42",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJtvojkriqs_Cn1ZsYb": {
+      "beacon_id": "2:3",
+      "prompt": "Imagine you're given the power to communicate with animals for a single day. What would be the first thing you'd want to ask, and to which creature?",
+      "timestamp": 1740433738751,
+      "users": [
+        "IuMzXitG0DNr1YR6eotOKD9gH8y1"
+      ]
+    },
+    "-OJtw4FJpL3w5wX3nOB4": {
+      "beacon_id": "2:3",
+      "prompt": "Imagine if libraries had secret passageways leading to different worlds based on the books you read. Which book portal would you step into first, and what adventure awaits on the other side?",
+      "timestamp": 1740433806371,
+      "users": [
+        "IuMzXitG0DNr1YR6eotOKD9gH8y1"
+      ]
+    },
+    "-OJtwCTsaHjshTplSnoG": {
+      "beacon_id": "2:3",
+      "prompt": "Imagine you're wandering through a forest where each step reveals a new chapter from a hidden book. What story do you hope unfolds, and who might you meet along the path?",
+      "timestamp": 1740433840071,
+      "users": [
+        "IuMzXitG0DNr1YR6eotOKD9gH8y1"
+      ]
+    },
+    "-OJtyCxK3Q-8IL2yCLOa": {
+      "beacon_id": "2:3",
+      "prompt": "Imagine if your favorite beverage could share its wildest stories—what kind of adventures would it have and where do you think it would go for a thrilling getaway? 🍹✨",
+      "timestamp": 1740434366308,
+      "users": [
+        "cs8taUz94EMvgwyqC87jo7eWqQl2"
+      ]
+    },
+    "-OJtyLG5mxjwT9xA9yNq": {
+      "beacon_id": "2:3",
+      "prompt": "Ever thought about what a tea party in space would be like? Imagine sipping cosmic cocktails while floating among the stars. What's your take on this starry soirée?",
+      "timestamp": 1740434400341,
+      "users": [
+        "cs8taUz94EMvgwyqC87jo7eWqQl2"
+      ]
+    },
+    "-OJu-xyW-Gt-gAacCAtf": {
+      "beacon_id": "2:3",
+      "prompt": "If your favorite video game character could come to life for just one day, what kind of adventures would you take them on in your city? 🌆🎮",
+      "timestamp": 1740435087280,
+      "users": [
+        "batAz1bhbaSwCCqOzmT2CweaHhT2"
+      ]
+    },
+    "-OJu0U8RINDbqLM3vDQ6": {
+      "beacon_id": "2:3",
+      "prompt": "Imagine you're designing a video game where the protagonist's superpower is cooking up a storm in the middle of a gym session to enhance their strength. What would their signature dish be, and how would it boost their abilities in the game? 🍲💪🎮",
+      "timestamp": 1740435223147,
+      "users": [
+        "batAz1bhbaSwCCqOzmT2CweaHhT2"
+      ]
+    },
+    "-OJu65McXhOGo7Mf5B6t": {
+      "beacon_id": "2:3",
+      "prompt": "If you could step into a painting and bring one song along, which artwork would you choose, and what's the perfect soundtrack for your adventure? 🌍🎨🎶",
+      "timestamp": 1740436694519,
+      "users": [
+        "08DcXYYzItfoc5kMR5aFCpYiCAq1"
+      ]
+    },
+    "-OJu6CZWFf1RWj2YjwPt": {
+      "beacon_id": "2:3",
+      "prompt": "If you could create your own museum exhibit, blending your favorite music with the world's greatest travel destinations, what would the theme be and what experiences would visitors have?",
+      "timestamp": 1740436724016,
+      "users": [
+        "08DcXYYzItfoc5kMR5aFCpYiCAq1"
+      ]
+    },
+    "-OJu9CWXWTjxbDBMyniD": {
+      "beacon_id": "2:3",
+      "prompt": "If you could design a museum that tells the story of music and architecture as one intricate dance, how would that look? Would the walls hum with rhythm, or would the sculptures sing the blues?",
+      "timestamp": 1740437510092,
+      "users": [
+        "08DcXYYzItfoc5kMR5aFCpYiCAq1",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2"
+      ]
+    },
+    "-OJu9n3ipS2REHy_ZzD2": {
+      "beacon_id": "2:3",
+      "prompt": "🎶✨ \"Imagine planning a dream museum/music festival in a city designed by you all. What kind of exhibits would be there, and what music would create the perfect atmosphere? P.S. Vaibhav, what's the name of the movie you'd shoot about this adventure?\" 🎨🕺",
+      "timestamp": 1740437663895,
+      "users": [
+        "08DcXYYzItfoc5kMR5aFCpYiCAq1",
+        "6FtfseIF99Tqa1Gk6aJZWF5ZZFm2",
+        "OsFLAjviBsV23Fov2ZXXFs0jR2l1"
+      ]
+    }
+  }
+}
