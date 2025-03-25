@@ -64,8 +64,8 @@ async function generateConversationStarter(userProfiles) {
   }
 }
 
-// Clean up old data and return nearby users for a beacon
-async function getNearbyUsers(beaconId) {
+// Modified getNearbyUsers function to include more data
+async function getNearbyUsers(beaconId, includeAll = false) {
   const snapshot = await beaconsRef.child(beaconId).child('users').once('value');
   const usersData = snapshot.val();
   if (!usersData) return [];
@@ -74,20 +74,24 @@ async function getNearbyUsers(beaconId) {
   const nearbyUsers = [];
 
   // Process users data
-  Object.values(usersData).forEach(async (userData) => {
-    // Convert timestamp from seconds to milliseconds
+  for (const [userId, userData] of Object.entries(usersData)) {
     const timestamp = userData.timestamp * 1000; // Convert to milliseconds
-
+    
     if (now - timestamp < CLEANUP_THRESHOLD) {
-      // Use signalStrength as rssi
-      if (userData.signalStrength >= PROXIMITY_THRESHOLD) {
-        nearbyUsers.push(userData.id);
+      if (includeAll || userData.signalStrength >= PROXIMITY_THRESHOLD) {
+        nearbyUsers.push({
+          id: userData.id,
+          timestamp: timestamp,
+          signalStrength: userData.signalStrength,
+          age: Math.round((now - timestamp) / 1000) + ' seconds ago'
+        });
       }
     } else {
       // Remove stale user data
-      await beaconsRef.child(beaconId).child('users').child(userData.id).remove();
+      console.log(`Removing stale user data for user: ${userId}`);
+      await beaconsRef.child(beaconId).child('users').child(userId).remove();
     }
-  });
+  }
 
   return nearbyUsers;
 }
@@ -129,8 +133,8 @@ app.get('/prompt', async (req, res, next) => {
 
     // Fetch user profiles from Firestore
     const userProfiles = await Promise.all(
-      nearbyUsers.map(async (userId) => {
-        const userDoc = await firestore.collection('users').doc(userId).get();
+      nearbyUsers.map(async (user) => {
+        const userDoc = await firestore.collection('users').doc(user.id).get();
         return userDoc.data();
       })
     );
@@ -164,17 +168,42 @@ app.get('/prompt', async (req, res, next) => {
   }
 });
 
+
+app.get('/users', async (req, res, next) => {
+  try {
+    const { beacon_id } = req.query;
+
+    if (!beacon_id) {
+      return res.status(400).json({ error: 'beacon_id is required' });
+    }
+
+    // Get all users regardless of proximity
+    const users = await getNearbyUsers(beacon_id, true);
+
+    return res.status(200).json({
+      total_users: users.length,
+      proximity_threshold: PROXIMITY_THRESHOLD,
+      cleanup_threshold: CLEANUP_THRESHOLD / 1000 + ' seconds',
+      users: users
+    });
+
+  } catch (error) {
+    next(error);
+  }
+});
+
 // Register error handler
 app.use(errorHandler);
 
 // Publish beacon updates to MQTT (original functionality)
 beaconsRef.on('value', (snapshot) => {
   const data = snapshot.val();
-  mqttClient.publish('sebschlo/feeds/beacon-users', JSON.stringify(data), (err) => {
+  const string = JSON.stringify(data);
+  mqttClient.publish('sebschlo/feeds/beacon-users', string, (err) => {
     if (err) {
       console.error('Failed to publish message:', err);
     } else {
-      console.log('Message published to topic beacon_users');
+      console.log('Message published to topic beacon_users: ' + string);
     }
   });
 });
