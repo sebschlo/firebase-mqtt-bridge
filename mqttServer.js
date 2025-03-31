@@ -37,7 +37,7 @@ const firestore = admin.firestore();
 
 // Constants
 const PROXIMITY_THRESHOLD = -60; // RSSI threshold for "close" proximity
-const CLEANUP_THRESHOLD = 5 * 60 * 1000; // 5 minutes in milliseconds
+const CLEANUP_THRESHOLD = 30000; // 30 seconds
 
 // Generate a conversation starter using OpenAI
 async function generateConversationStarter(userProfiles) {
