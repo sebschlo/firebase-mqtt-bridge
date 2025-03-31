@@ -51,7 +51,7 @@ async function generateConversationStarter(userProfiles) {
         },
         {
           role: "user",
-          content: `The following people approach: ${JSON.stringify(userProfiles)}.`
+          content: `The following people approach: ${JSON.stringify(userProfiles)}. Create a brief and concise question that will get them talking about something they have in common. The question should not be too revealing or directly mention anything from their profiles, but be subtle and try to find interesting connections. Feel free to extrapolate from their profiles what they might like. Don't be too poetic, find a solid question. Ideally this should get them talking for a while.`
         }
       ],
       max_tokens: 150
